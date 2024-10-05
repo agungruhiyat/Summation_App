@@ -1,27 +1,38 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Http\Requests\StoresummationRequest;
 use App\Http\Requests\UpdatesummationRequest;
 use App\Models\Summations;
+use Illuminate\Http\Request;
 
 class SummationController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-         $summations = Summations::all();
-         return response()->json(["success"=> true,"summation"=>$summations]);
+        $query = Summations::query();
+    
+    if ($request->has('search')) {
+    $search = $request->input('search');
+    $query->where('processed_by', 'like', "%{$search}%");
+    }
+
+    $summations = Summations::paginate(2);
+    return response()->json(["success"=> true,"summations"=>$summations]);
+    
+    
+    // Tampilkan error untuk debugging
+    
         // try{
-               
+            
         // }catch(\Exception $e){
 
         // }
+    
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -29,7 +40,7 @@ class SummationController extends Controller
     public function store(StoresummationRequest $request)
     {
         $summations = Summations::create($request->validated());
-        return response()->json(["status"=> "success","summation"=>$summations]);
+        return response()->json(["status"=> "success","summations"=>$summations]);
     }
 
     /**

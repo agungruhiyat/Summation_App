@@ -22,14 +22,16 @@ class UpdatesummationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'destination_user_id' => 'require|integer',
-            'sender_user_id' => 'require|integer',
-            'total' => 'require|numeric',
-            'rate_per_unit' => 'require|numeric',
-            'bank' => 'require|string',
-            'acount_number' => 'require|string',
-            'transfer_fees' => 'require|numaric',   
-            'processed_by' => 'require|string'
+            'destination_user_id' => 'required|integer',
+            'sender_user_id' => 'required|integer',
+            'total' => 'required|numeric',
+            'rate_per_unit' => 'required|numeric',
+            'bank' => 'required|string',
+            'account_number' => 'required|numeric',
+            'transfer_fees' => 'required|numeric',   
+            'processed_by' => 'required|string'
+            
+            
         ];
     }
 }

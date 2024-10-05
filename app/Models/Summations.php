@@ -23,7 +23,9 @@ class  Summations extends Model
         "bank",
         "account_number",
         "transfer_fees",
-        "processed_by"
+        "processed_by",
+        "total_price",
+        "total_pay"
     ];
 
     protected $casts = [

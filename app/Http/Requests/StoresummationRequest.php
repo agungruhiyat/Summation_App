@@ -24,12 +24,15 @@ class StoresummationRequest extends FormRequest
         return [
             "destination_user_id" => "required|integer",
             "sender_user_id" => "required|integer",
-            "total"=> "numeric",
-            "rate_per_unit" => "numeric",
+            "total"=> "required|numeric",
+            "rate_per_unit" => "required|numeric",
             "bank" => "required|string",
             "account_number" => "required|integer",
             "transfer_fees" => "numeric",   
-            "processed_by" => "required|string"
+            "processed_by" => "required|string",
+            "total_pay" => "required|integer",
+            "total_price" => "required|integer"
+
         ];
     }
 }
