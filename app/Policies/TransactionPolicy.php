@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
+use App\Models\Transaction;
 use App\Models\User;
-use App\Models\summation;
 use Illuminate\Auth\Access\Response;
 
-class SummationPolicy
+class TransactionPolicy
 {
     /**
      * Determine whether the user can view any models.
@@ -19,7 +19,7 @@ class SummationPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, summation $summation): bool
+    public function view(User $user, Transaction $transaction): bool
     {
         //
     }
@@ -35,7 +35,7 @@ class SummationPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, summation $summation): bool
+    public function update(User $user, Transaction $transaction): bool
     {
         //
     }
@@ -43,7 +43,7 @@ class SummationPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, summation $summation): bool
+    public function delete(User $user, Transaction $transaction): bool
     {
         //
     }
@@ -51,7 +51,7 @@ class SummationPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, summation $summation): bool
+    public function restore(User $user, Transaction $transaction): bool
     {
         //
     }
@@ -59,7 +59,7 @@ class SummationPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, summation $summation): bool
+    public function forceDelete(User $user, Transaction $transaction): bool
     {
         //
     }

@@ -1,5 +1,6 @@
 <?php
-use App\Http\Controllers\SummationController;
+
+use App\Http\Controllers\TransactionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::group(["prefix"=>"summations"],function(){
-    Route::post("/",[SummationController::class,"store"]);
-    Route::get("/",[SummationController::class,"index"]);
-    Route::put("/{id}",[SummationController::class,"update"]);
-    Route::delete("/{id}",[SummationController::class,"delete"]);
+Route::group(["prefix"=>"transactions"],  function(){
+    Route::post("/",[TransactionController::class,"store"]);
+    Route::get("/",[TransactionController::class,"index"]);
+    Route::put("/{id}",[TransactionController::class,"update"]);
+    Route::delete("/{id}",[TransactionController::class,"delete"]);
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoresummationRequest extends FormRequest
+class UpdateTransactionRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,16 +22,13 @@ class StoresummationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "destination_user_id" => "required|integer",
-            "sender_user_id" => "required|integer",
-            "total"=> "required|numeric",
-            "rate_per_unit" => "required|numeric",
-            "bank" => "required|string",
-            "account_number" => "required|integer",
-            "transfer_fees" => "numeric",   
-            "processed_by" => "required|string",
+            "customer" => "required|string",
+            "name_product" => "required|string",
+            "price" => "required|integer",
+            "total_product" => "required|integer",
+            "total_price" => "required|integer",
             "total_pay" => "required|integer",
-            "total_price" => "required|integer"
+            "change_money" => "required|integer",
 
         ];
     }

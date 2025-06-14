@@ -3,6 +3,13 @@
 - laravel 10
 - composer
 - mysql
+- sweetalert2
+- axios
+- routify
+-node js 
+- nvm v 20
+- npm 
+- moment
 
 ## use 
 - first composer install
@@ -14,12 +21,13 @@
 - cp .env.exmaple .env
 - php artisan key:migrate
 - php artisan serve
-- php artisan make:migration add_total_py_total_price_column_on_summations_table --table=summations
+- php artisan make:model Transaction -a 
+# - php artisan make:migration add_total_py_total_price_column_on_summations_table --table=summations
 - cd ../ # untuk kembali ke file sebelumnya
 ```
 - third
 ```shell
-- php artisan make:model summations -a
+- php artisan make:model transactions -a
 - php artisan migrate
 - php artisan migrate:rollback
 ```
@@ -35,8 +43,8 @@
 - nvm --version
 - instal nvm
 - sudo chown -R $(whoami) ~/.nvm
--  nvm install 16
-- nvm use 16
+-  nvm install 23
+- nvm use 23
 - npm run dev
 - npm install axios
 -  npm install sweetalert2
@@ -46,6 +54,12 @@
 - npm install moment
 
 ```
+
+## pengertiaon routify
+### adalah framework routing yang digunakan unutuk mengatur bagaimana b
+
+
+
 # list projek yang akan di buat
 ## 1.mading digital 
 #### manding ini bertujuan  memberikan impormasi maupun himbauwan untuk edukasi para siswa yang di kelola oleh guru maupun osis 

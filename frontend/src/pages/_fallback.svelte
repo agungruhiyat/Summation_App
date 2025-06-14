@@ -17,8 +17,8 @@
 
 <div class="e404">
   <div class="huge">404</div>
-  <div class="big">Page not found. 
+  <div class="big">Page not found.
   <!-- link to the parent folder of _fallback.svelte -->
-  <a href={$url('./summations')}>Go back</a>
+  <a href={$url('./transactions')}>Go back</a>
   </div>
 </div>

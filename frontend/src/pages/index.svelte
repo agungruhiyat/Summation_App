@@ -1,5 +1,5 @@
 <script>
-    import MainIndex from "./summations/index.svelte";
-    
+    import MainIndex from "./transactions/index.svelte";
+
 </script>
 <MainIndex/>
